@@ -9,7 +9,7 @@ apply from: "../../parse_json.gradle"
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "26.0.3"
+    buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "com.tencent.iot.explorer.device.android.app"
         minSdkVersion 19
