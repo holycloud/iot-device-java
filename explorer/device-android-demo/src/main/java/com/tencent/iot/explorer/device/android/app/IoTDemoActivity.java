@@ -125,7 +125,8 @@ public class IoTDemoActivity extends AppCompatActivity {
                 startActivity(new Intent(IoTDemoActivity.this, CentralMainActivity.class));
             }
         });
-        Watermark.getInstance(this).show(this, BuildConfig.SDKDemoCommitID + "    xp2p: " + XP2P.getVersion());
+        Watermark.getInstance(this).show(this, "IoTAndroidDevice" + "    xp2p: " + XP2P.getVersion());
+      //  Watermark.getInstance(this).show(this, BuildConfig.SDKDemoCommitID + "    xp2p: " + XP2P.getVersion());
     }
 
     private void initLogConfigurator() {
