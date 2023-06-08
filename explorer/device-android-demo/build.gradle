@@ -23,12 +23,11 @@ android {
                 cppFlags "-std=c++11 -frtti"
             }
         }
-
-        ndk {
-            // 设置支持的SO库架构
-            abiFilters 'armeabi-v7a', 'arm64-v8a'
-            ndkVersion '22.0.7026061'
-        }
+//        ndk {
+//            // 设置支持的SO库架构
+//            abiFilters 'armeabi-v7a', 'arm64-v8a'
+//            ndkVersion '22.0.7026061'
+//        }
 
         buildConfigField 'String', 'PRODUCT_ID', "\"${getValueById('PRODUCT_ID')}\""
         buildConfigField 'String', 'DEVICE_NAME', "\"${getValueById('DEVICE_NAME')}\""
@@ -55,11 +54,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-        }
-    }
+//    externalNativeBuild {
+//        cmake {
+//            path "src/main/cpp/CMakeLists.txt"
+//        }
+//    }
 
     packagingOptions {
         exclude 'org/bouncycastle/x509/CertPathReviewerMessages_de.properties'
@@ -102,7 +101,7 @@ dependencies {
     implementation project(':explorer:explorer-device-face')
     implementation project(':explorer:explorer-device-rtc')
     implementation project(':explorer:explorer-device-central')
-    api project(':explorer:explorer-device-video')
+   // api project(':explorer:explorer-device-video')
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.recyclerview:recyclerview:1.2.0'
     testImplementation 'junit:junit:4.13'
