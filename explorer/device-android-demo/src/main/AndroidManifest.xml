@@ -26,12 +26,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.tencent.iot.explorer.device.video.device_and_device.DeviceAndDeviceCommunicationActivity" />
-        <activity android:name="com.tencent.iot.explorer.device.central.CentralMainActivity" />
-        <activity android:name="com.tencent.iot.explorer.device.video.push_stream.PushStreamActivity" />
-        <activity android:name="com.tencent.iot.explorer.device.video.push_stream.PushRealTimeStreamActivity" />
-        <activity android:name="com.tencent.iot.explorer.device.video.VideoEntryActivity" />
-        <activity
             android:name=".WiFiActivity"
             android:exported="false" />
         <activity android:name="com.tencent.iot.explorer.device.tme.TmeConfigActivity" />
@@ -58,19 +52,7 @@
         <activity android:name="com.tencent.iot.explorer.device.face.AuthActivity" />
         <activity android:name="com.tencent.iot.explorer.device.face.RetrieveWithAndroidCameraActivity" />
         <activity android:name="com.tencent.iot.explorer.device.rtc.TRTCMainActivity" />
-        <activity android:name="com.tencent.iot.explorer.device.video.call.MainActivity" />
-        <activity
-            android:name="com.tencent.iot.explorer.device.video.call.RecordVideoActivity"
-            android:launchMode="singleTop" />
-        <activity
-            android:name="com.tencent.iot.explorer.device.video.push_stream.RecordVideoActivity2"
-            android:launchMode="singleTop" />
-        <activity
-            android:name="com.tencent.iot.explorer.device.video.device_and_device.RecordVideoActivity3"
-            android:launchMode="singleTop" />
-        <activity
-            android:name="com.tencent.iot.explorer.device.video.device_and_device.RecordVideoActivity4"
-            android:launchMode="singleTop" />
+        
         <activity
             android:name="com.tencent.iot.explorer.device.rtc.ui.videocall.TRTCVideoCallActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
