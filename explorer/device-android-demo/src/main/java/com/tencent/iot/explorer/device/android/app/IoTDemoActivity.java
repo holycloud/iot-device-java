@@ -2,6 +2,7 @@ package com.tencent.iot.explorer.device.android.app;
 
 import android.Manifest;
 import android.content.Intent;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -13,12 +14,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.tencent.iot.explorer.device.android.app.utils.Watermark;
+//import com.tencent.iot.explorer.device.android.app.utils.Watermark;
 import com.tencent.iot.explorer.device.central.CentralMainActivity;
 import com.tencent.iot.explorer.device.face.AuthActivity;
 import com.tencent.iot.explorer.device.rtc.TRTCMainActivity;
-import com.tencent.iot.explorer.device.video.VideoEntryActivity;
-import com.tencent.xnet.XP2P;
+//import com.tencent.iot.explorer.device.video.VideoEntryActivity;
+//import com.tencent.xnet.XP2P;
 
 import java.io.File;
 
@@ -53,7 +54,7 @@ public class IoTDemoActivity extends AppCompatActivity {
 
         //日志功能开启写权限
         try {
-            for (String ele: PERMISSIONS_STORAGE) {
+            for (String ele : PERMISSIONS_STORAGE) {
                 int granted = ActivityCompat.checkSelfPermission(this, ele);
                 if (granted != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(this, PERMISSIONS_STORAGE, REQUEST_EXTERNAL_STORAGE);
@@ -75,8 +76,8 @@ public class IoTDemoActivity extends AppCompatActivity {
         mIoTCentralBtn = findViewById(R.id.btn_central);
 
         mIoTVideoBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(IoTDemoActivity.this, VideoEntryActivity.class);
-            startActivity(intent);
+            // Intent intent = new Intent(IoTDemoActivity.this, VideoEntryActivity.class);
+            // startActivity(intent);
         });
 
         mIoTDemoBtn.setOnClickListener(new View.OnClickListener() {
@@ -125,8 +126,7 @@ public class IoTDemoActivity extends AppCompatActivity {
                 startActivity(new Intent(IoTDemoActivity.this, CentralMainActivity.class));
             }
         });
-        Watermark.getInstance(this).show(this, "IoTAndroidDevice" + "    xp2p: " + XP2P.getVersion());
-      //  Watermark.getInstance(this).show(this, BuildConfig.SDKDemoCommitID + "    xp2p: " + XP2P.getVersion());
+        //  Watermark.getInstance(this).show(this, BuildConfig.SDKDemoCommitID + "    xp2p: " + XP2P.getVersion());
     }
 
     private void initLogConfigurator() {
